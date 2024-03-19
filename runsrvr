@@ -1,0 +1,7 @@
+#!/bin/bash
+set -xe
+
+EXEC_PATH="D:/Thesis/code/lhspy"
+
+scp /home/anhle/thesis/lhspy/server.py winpc:/$EXEC_PATH
+ssh winpc "$EXEC_PATH/lhs/Scripts/activate && python $EXEC_PATH/server.py"
